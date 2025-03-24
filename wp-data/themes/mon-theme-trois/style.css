@@ -1,0 +1,634 @@
+/*
+Theme Name: Mon Thème Perso 3
+Theme URI: https://example.com
+Author: Wannes Grami
+Author URI: https://itgenius.be
+Description: Un thème WordPress personnalisé basique.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mon-theme-trois
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #0073aa; /* Nouvelle couleur */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #0073aa; /* Nouvelle couleur */
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transition pour le survol */
+}
+
+nav ul li a:hover {
+  color: #f4f4f4; /* Légère variation de couleur au survol */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Page d'accueil */
+.homepage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  background-color: #0073aa;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #0073aa;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005f8b;
+  color: white;
+}
+
+.about {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0073aa;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.latest-posts {
+  margin: 40px 0;
+}
+
+.latest-posts h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0073aa;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blog-column {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-column:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post-thumbnail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #0073aa;
+}
+
+.blog-column h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-column h3 a:hover {
+  text-decoration: underline;
+}
+
+.blog-column p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073aa;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #005f8b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .latest-posts h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Section Blog */
+.blog-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #0073aa;
+}
+
+.service h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.service h2 a:hover {
+  text-decoration: underline;
+}
+
+.post-excerpt {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073aa;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+  background-color: #005f8b;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pagination a, .pagination span {
+  padding: 8px 16px;
+  margin: 0 4px;
+  background-color: #0073aa;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #005f8b;
+}
+
+.pagination .current {
+  background-color: #005f8b;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- FORMULAIRE ---- */
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #0073aa;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 115, 170, 0.5);
+}
+
+textarea.form-control {
+  height: 150px;
+  resize: vertical;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0073aa;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005f8b;
+}
+
+/* Style pour le champ de fichier */
+.wpcf7-form-control-wrap input[type="file"] {
+  padding: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Conteneur des services */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style pour chaque service */
+.service {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #0073aa;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Lien de contact */
+.contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073aa;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+  background-color: #005f8b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Page d'article individuel élargie */
+.single-post-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  background-color: #0073aa;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero .post-meta {
+  font-size: 1rem;
+  color: #f4f4f4;
+}
+
+.single-post-content {
+  margin-top: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.post-thumbnail {
+  margin-bottom: 30px;
+}
+
+.post-thumbnail .featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-content a {
+  color: #0073aa;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+  font-size: 1rem;
+}
+
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
+  color: #0073aa;
+  text-decoration: none;
+}
+
+.post-navigation .nav-previous a:hover,
+.post-navigation .nav-next a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .single-post-page {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .post-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .post-navigation .nav-previous,
+  .post-navigation .nav-next {
+    text-align: center;
+  }
+}
+
+/* Ancien style du footer */
+footer {
+  background: #222; /* Remplacer cette ligne */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Nouveau style du footer */
+footer {
+  background: #005f8b; /* Nouvelle couleur */
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Augmenter le padding pour plus d'espace */
+  margin-top: 50px;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}

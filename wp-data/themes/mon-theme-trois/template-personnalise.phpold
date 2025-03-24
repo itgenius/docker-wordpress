@@ -1,0 +1,10 @@
+<?php
+/**
+ * Template Name: Mon Thème Perso 3
+ */
+get_header();
+?>
+
+<h1>Ceci est une page avec un modèle personnalisé</h1>
+
+<?php get_footer(); ?>
