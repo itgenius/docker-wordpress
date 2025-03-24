@@ -29,18 +29,18 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 2. Lancez les conteneurs Docker :
 docker-compose up -d
 
-Accédez à votre site WordPress dans votre navigateur à l'adresse :
+3. Accédez à votre site WordPress dans votre navigateur à l'adresse :
 http://localhost:8000
 
-Structure du projet :
+4. Structure du projet :
 . docker-compose.yml : Configuration des services Docker (WordPress, MySQL, etc.).
 . wp-data/ : Contient les données persistantes de WordPress.
 . .gitignore : Fichiers et dossiers ignorés par Git.
 . README.md : Documentation du projet.
-Personnalisation : 
+5. Personnalisation : 
 . Modifier les identifiants de la base de données : Vous pouvez modifier les variables d'environnement dans le fichier docker-compose.yml pour personnaliser les identifiants MySQL.
 . Ajouter des thèmes : Placez vos thèmes WordPress dans le dossier wp-data/themes.
-Commandes utiles :
+6. Commandes utiles :
 . Démarrer les conteneurs :
 docker-compose up -d
 . Arrêter les conteneurs :
@@ -48,5 +48,5 @@ docker-compose down
 . Voir les logs :
 docker-compose logs -f
 
-Licence
+7. Licence
 Ce projet est sous licence MIT.
