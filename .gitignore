@@ -1,0 +1,27 @@
+# WordPress core (géré par Docker)
+wp-admin/
+wp-includes/
+wp-config.php
+wp-content/*
+!wp-content/themes/
+
+# wp-data (on garde uniquement themes)
+wp-data/*
+!wp-data/wp-content/themes/
+
+# Fichiers d'accès/d'identification
+accessWordpressDocker.txt
+
+# Environnement Docker
+.env
+docker-compose.override.yml
+
+# Fichiers système
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Dependencies
+node_modules/
+vendor/
