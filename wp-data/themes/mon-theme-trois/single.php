@@ -3,10 +3,12 @@
 <main class="single-post-page">
     <section class="hero">
         <div class="container">
-            <h1><?php the_title(); ?></h1>
-            <div class="post-meta">
-                Posté le <?php the_date(); ?> par <?php the_author(); ?>
-            </div>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <h1><?php the_title(); ?></h1>
+                <div class="post-meta">
+                    Posté le <?php the_date(); ?> par <?php the_author(); ?>
+                </div>
+            <?php endwhile; endif; ?>
         </div>
     </section>
 
