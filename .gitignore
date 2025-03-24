@@ -2,8 +2,6 @@
 wp-admin/
 wp-includes/
 wp-config.php
-wp-content/*
-!wp-content/themes/
 
 # wp-data (on garde uniquement themes)
 wp-data/*
@@ -24,4 +22,3 @@ docker-compose.override.yml
 
 # Dependencies
 node_modules/
-vendor/
